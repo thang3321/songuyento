@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="result"></p>
+        <script>
+            let num = +prompt("Nhập một số nguyên");
+            let count = 0;
+            let N = 2;
+            let array = [];
+            while(count < num){
+                let flag = true ;
+                for(let j =2; j<N; j++){
+                    if(N%j == 0){
+                        flag=false;
+                        break;
+                    }
+                }
+                if(flag){
+                    count++;
+                    array.push(N);
+                }
+                N++;
+            }
+            document.getElementById("result").innerHTML = array;
+        </script>
+    </body>
+</html>
